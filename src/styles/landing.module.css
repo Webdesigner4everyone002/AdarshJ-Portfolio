@@ -1,0 +1,235 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+.landingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.landingImg {
+  --img-size: 400px;
+  position: absolute;
+  left: 35%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: var(--img-size);
+  height: var(--img-size);
+  
+  /* ZOOM OUT TECHNIQUE */
+  object-fit: contain; 
+  padding: 35px; /* Significant padding to "zoom out" the subject further */
+  
+  border-radius: 50%;
+  background: #15202b;
+  border: 12px solid #111;
+  box-shadow: 
+    0px 0px 60px rgba(29, 155, 240, 0.2),
+    0px 0px 100px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.landingImg:hover {
+  transform: translateX(-50%) scale(1.05);
+  padding: 20px; /* Slight "zoom in" effect on hover */
+}
+
+.landingContainerLeft {
+  flex: 35%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #111 0%, #15202b 100%);
+}
+
+.lclContent {
+  margin: 3.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.landingSocial {
+  font-size: 40px;
+  margin: 0 1.25rem;
+  transition: all 0.4s ease;
+  opacity: 0.8;
+}
+
+.landingSocial:hover {
+  transform: translateY(-8px) scale(1.2);
+  opacity: 1;
+  color: var(--accent) !important;
+}
+
+.landingContainerRight {
+  flex: 65%;
+  height: 100%;
+  background: linear-gradient(45deg, #15202b 0%, #111 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.landingContainerRight::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(29, 155, 240, 0.05) 0%, transparent 70%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lcrContent {
+  width: 50%;
+  margin-right: 8rem;
+  font-family: var(--primaryFont);
+  font-style: normal;
+  z-index: 5;
+}
+
+.lcrContent h6 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lcrContent h1 {
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 1.5rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.typedHeader {
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.lcrContent p {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+}
+
+.lcrButtonContainer {
+  margin-top: 3.5rem;
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.lcrButtonContainer button {
+  padding: 0 2.5rem !important;
+  height: 56px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+  .lcrContent {
+    margin-right: 4rem;
+    width: 55%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .landingImg {
+    --img-size: 320px;
+    padding: 25px;
+  }
+  .lcrContent h1 {
+    font-size: 3.5rem;
+  }
+  .lcrButtonContainer {
+    width: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .landingImg {
+    --img-size: 280px;
+    left: 40%;
+  }
+
+  .lcrContent {
+    width: 65%;
+    margin-right: 2rem;
+  }
+
+  .lcrButtonContainer {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .landingContainer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .landingImg {
+    --img-size: 220px;
+    left: 50%;
+    top: 30%;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+  }
+  .landingImg:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  .landingContainerLeft {
+    height: 35%;
+    width: 100%;
+  }
+  .landingContainerRight {
+    height: 65%;
+    width: 100%;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+  .lcrContent {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .lcrContent h1 {
+    font-size: 3rem;
+  }
+  .lcrContent p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lcrButtonContainer {
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}

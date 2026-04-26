@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "BestermindRegular";
+  src: url("../assets/fonts/Bestermind/BestermindRegular.ttf");
+  src: url("../assets/fonts/Bestermind/BestermindRegular.ttf")
+      format("embedded-opentype"),
+    url("../assets/fonts/Bestermind/BestermindRegular.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MuiPaper-root,
+.MuiBackdropRoot {
+  background: rgba(10, 17, 25, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* scrollBar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1119;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d9bf0;
+  border-radius: 10px;
+  border: 2px solid #0a1119;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15202b;
+}
+
+:root {
+  --primaryFont: "Outfit", "Montserrat", "Poppins", sans-serif;
+}
+
+::selection {
+  background: #1d9bf0;
+  color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+}

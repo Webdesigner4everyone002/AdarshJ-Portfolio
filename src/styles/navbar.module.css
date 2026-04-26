@@ -1,0 +1,67 @@
+.navbar {
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 17, 25, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 4rem;
+}
+
+.navbarContainer > h1 {
+  font-family: "BestermindRegular";
+  color: var(--primary-2);
+  font-size: 2.8rem;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbarContainer > h1:hover {
+  transform: scale(1.05);
+}
+
+.navMenu {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navMenu:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+@media (max-width: 1100px) {
+  .navbarContainer {
+    padding: 0 2rem;
+  }
+  .navbarContainer > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 5rem;
+  }
+  .navbarContainer {
+    padding: 0 1.5rem;
+  }
+  .navbarContainer > h1 {
+    font-size: 2rem;
+  }
+}
