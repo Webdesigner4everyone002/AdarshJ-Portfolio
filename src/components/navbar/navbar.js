@@ -1,8 +1,8 @@
 import Drawer from '@material-ui/core/Drawer';
 import React, { useContext, useState } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
-import { FaUser } from 'react-icons/fa';
+import { BsFillGridFill, BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
+import { FaBriefcase, FaTrophy, FaUser } from 'react-icons/fa';
 import { HiDocumentText } from 'react-icons/hi';
 import { IoHomeSharp, IoMenuSharp } from 'react-icons/io5';
 import { MdPhone } from 'react-icons/md';
@@ -103,6 +103,45 @@ function Navbar() {
                                     <FaUser className="text-xl sm:text-2xl" />
                                     <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
                                         About
+                                    </span>
+                                </div>
+                            </Link>
+                        </Fade>
+
+                        <Fade left>
+                            <Link
+                                href='/#experience'
+                            >
+                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
+                                    <FaBriefcase className="text-xl sm:text-2xl" />
+                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                        Experience
+                                    </span>
+                                </div>
+                            </Link>
+                        </Fade>
+
+                        <Fade left>
+                            <Link
+                                href='/#projects'
+                            >
+                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
+                                    <BsFillGridFill className="text-xl sm:text-2xl" />
+                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                        Projects
+                                    </span>
+                                </div>
+                            </Link>
+                        </Fade>
+
+                        <Fade left>
+                            <Link
+                                href='/#highlights'
+                            >
+                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
+                                    <FaTrophy className="text-xl sm:text-2xl" />
+                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                        Achievements
                                     </span>
                                 </div>
                             </Link>
